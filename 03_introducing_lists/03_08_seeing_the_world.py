@@ -22,3 +22,11 @@ print(places)
 print("You can get the original list back by using the reverse function again:")
 places.reverse()
 print(places)
+
+print("This is the new sorted list:")
+places.sort()
+print(places)
+
+print("This is the new reverse sorted list:")
+places.sort(reverse=True)
+print(places)
