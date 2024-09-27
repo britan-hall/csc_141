@@ -11,7 +11,7 @@ class GameStats():
         
         # High score will be read from high_score.txt file, or set to 0
         try:
-            with open('part_2_projects\game_alien_invasion\high_score.txt') as high_score_file:
+            with open('high_score.txt') as high_score_file:
                 self.high_score = int(high_score_file.read())
         except FileNotFoundError:
             self.high_score = 0

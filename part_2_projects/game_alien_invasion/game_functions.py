@@ -137,7 +137,7 @@ def check_high_score(stats, sb):
 
 def save_high_score(stats):
     """Save the high score to a file."""
-    with open('part_2_projects\game_alien_invasion\high_score.txt', 'w') as f:
+    with open('high_score.txt', 'w') as f:
         f.write(str(stats.high_score))
 
 
