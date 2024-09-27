@@ -45,8 +45,8 @@ def update_high_scores(name, score):
     # Sort scores in descending order by score
     high_scores = sorted(high_scores, key=lambda x: x['score'], reverse=True)
 
-    # Keep only the top 3 scores
-    high_scores = high_scores[:3]
+    # Keep only the top 5 scores, can be changed
+    high_scores = high_scores[:5]
 
     # Save the updated high scores
     save_high_scores(high_scores)
