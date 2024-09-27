@@ -66,7 +66,7 @@ def run_game():
     pygame.display.set_caption("Alien Invasion")
 
     # Load the title image
-    title_image = pygame.image.load('images\cover.jpg')  # Ensure this path is correct
+    title_image = pygame.image.load('images\cover.jpg')
 
     # Make the Play button.
     play_button = Button(ai_settings, screen, "Play")
