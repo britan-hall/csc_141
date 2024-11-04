@@ -1,3 +1,5 @@
+# 2, simple function that handles errors
+
 def addition():
     while True:
         number_1 = input('Enter a number: ')

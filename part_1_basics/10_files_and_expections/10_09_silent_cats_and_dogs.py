@@ -1,3 +1,5 @@
+# 1, adds to the last program.
+
 from pathlib import Path
 
 path_1 = Path('10_files_and_expections/lib_10_08_cats_and_dogs_1.txt')

@@ -1,3 +1,4 @@
+# 1, simple way to write to JSON file
 from pathlib import Path
 import json
 

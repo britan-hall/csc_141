@@ -1,3 +1,5 @@
+# 2, easy combination from the last two programs
+
 from pathlib import Path
 import json
 

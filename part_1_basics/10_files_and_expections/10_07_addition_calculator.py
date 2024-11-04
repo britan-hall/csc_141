@@ -1,3 +1,4 @@
+# 1, similar to last program
 def addition():
     while True:
         number_1 = input('Enter a number: ')

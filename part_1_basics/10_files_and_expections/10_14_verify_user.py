@@ -1,3 +1,5 @@
+# 4, 2 functions that read and write to a JSON file while also handling errors
+
 from pathlib import Path
 import json
 

@@ -1,3 +1,5 @@
+# 2, 2 paths that read and exaime how many keywords are in the article
+
 from pathlib import Path
 
 path_1 = Path('10_files_and_expections/lib_10_10_common_words_1.txt')

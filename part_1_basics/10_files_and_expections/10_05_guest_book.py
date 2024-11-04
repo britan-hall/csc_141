@@ -1,3 +1,4 @@
+# 2, loop that write how many guest names to the path file
 from pathlib import Path
 
 path = Path('10_files_and_expections/lib_10_05_guest_book.txt')

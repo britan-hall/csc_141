@@ -1,3 +1,5 @@
+# 1, simple way to read data from a JSON file
+
 from pathlib import Path
 import json
 

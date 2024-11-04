@@ -1,3 +1,4 @@
+# 1, Simple way to write to the path file
 from pathlib import Path
 
 path = Path('10_files_and_expections/lib_10_04_guest.txt')
