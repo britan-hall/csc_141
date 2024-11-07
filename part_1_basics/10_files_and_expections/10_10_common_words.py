@@ -4,8 +4,8 @@ from pathlib import Path
 
 path_1 = Path('10_files_and_expections/lib_10_10_common_words_1.txt')
 path_2 = Path('10_files_and_expections/lib_10_10_common_words_2.txt')
-contents_1 = path_1.read_text()
-contents_2 = path_2.read_text()
+contents_1 = path_1.read_text().lower()
+contents_2 = path_2.read_text().lower()
 
 texts = [contents_1,contents_2]
 index = 0
