@@ -1,7 +1,7 @@
 [
     {
         "name": "Britan",
-        "score": 200281
+        "score": 20000281
     },
     {
         "name": "Joe",
@@ -12,11 +12,11 @@
         "score": 54618
     },
     {
-        "name": "Bob",
-        "score": 5660
-    },
-    {
         "name": "Jill",
         "score": 40047
+    },
+    {
+        "name": "Britan",
+        "score": 31500
     }
 ]
