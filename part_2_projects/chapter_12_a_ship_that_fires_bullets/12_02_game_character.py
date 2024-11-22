@@ -1,3 +1,5 @@
+# 2, class setup for player
+
 import pygame
 
 pygame.init()
