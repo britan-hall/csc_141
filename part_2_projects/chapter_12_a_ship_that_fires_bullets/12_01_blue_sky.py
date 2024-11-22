@@ -1,3 +1,5 @@
+# 1, pretty simple
+
 import pygame
 
 pygame.init()

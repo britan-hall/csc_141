@@ -1,3 +1,5 @@
+# 4, shooting 
+
 import pygame
 
 pygame.init()
