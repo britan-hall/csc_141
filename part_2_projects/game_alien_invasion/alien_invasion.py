@@ -14,6 +14,12 @@ def render_text(screen, text, font, color, x, y):
     text_surface = font.render(text, True, color)
     screen.blit(text_surface, (x, y))
 
+# Function to adjust scroll speeds based on the wave number
+def update_scroll_speeds(wave):
+    base_speeds = [.1, .4, .3, .2]
+    # Scale speeds as wave increases
+    return [speed + 0.05 * wave for speed in base_speeds]
+
 def run_game():
     # Initialize game and create a screen object
     pygame.init()
@@ -34,6 +40,9 @@ def run_game():
     scroll_positions = [0, 0, 0, 0]
     scroll_speeds = [.1, .4, .3, .2]
 
+    # Initialize wave number
+    wave_number = 1  # Start from wave 1
+
     # Load the title image
     title_image = pygame.image.load('images/cover.jpg')
 
@@ -42,7 +51,10 @@ def run_game():
     
     # Create an instance to store game statistics and create a scoreboard.
     stats = GameStats(ai_settings)
-    sb = Scoreboard(ai_settings, screen, stats)
+    # Use a custom font
+    custom_font_path = "ka1.ttf"  # Replace with your actual font file path
+    sb = Scoreboard(ai_settings, screen, stats, font_path=custom_font_path)
+
     
     # Make a ship, a group of bullets, and a group of aliens
     ship = Ship(ai_settings, screen)
@@ -96,6 +108,9 @@ def run_game():
                             player_name += event.unicode
 
         if stats.game_active and not asking_for_name:
+            # Update scroll speeds based on the wave
+            scroll_speeds = update_scroll_speeds(wave_number)
+
             # Draw the parallax stars
             draw_star_bg(screen, bg_images, scroll_positions, scroll_speeds, ai_settings.screen_height)
 
@@ -104,6 +119,11 @@ def run_game():
             ship.update()
             gf.update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets)
             gf.update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets)
+
+            # Check if all aliens are defeated
+            if not aliens:
+                wave_number += 1  # Increment the wave count
+                gf.create_fleet(ai_settings, screen, ship, aliens)
 
             # Update screen with all elements
             gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button)
